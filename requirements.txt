@@ -1,0 +1,19 @@
+# Install PyTorch/CUDA first; see docs/INSTALL.md.
+torch==2.2.0
+torchvision==0.17.0
+triton==2.2.0
+mamba-ssm==2.0.4
+causal-conv1d==1.4.0
+timm==0.4.12
+numpy<2
+einops
+fvcore
+packaging
+yacs
+termcolor
+tensorboard
+PyYAML
+Pillow
+tqdm
+# Keep the transformers dependency of Mamba compatible with this PyTorch generation.
+transformers==4.39.3

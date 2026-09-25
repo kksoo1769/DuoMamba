@@ -1,0 +1,3 @@
+mmengine==0.10.7
+yacs==0.1.8
+PyYAML>=6.0

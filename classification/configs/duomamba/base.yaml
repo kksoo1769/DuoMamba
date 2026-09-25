@@ -1,0 +1,37 @@
+MODEL:
+  TYPE: duomamba
+  NAME: duomamba_base
+  DUOMAMBA:
+    DROP_PATH_RATE: 0.5
+    EMBED_DIM: 96
+    DEPTHS: [2, 5, 20, 6]
+    NUM_HEADS: [6, 12, 24, 24]
+    EXPAND: 2
+    CHUNK_SIZE: 32
+    MIXER_TYPES:
+      - 'DuoScanMixer'
+      - 'DuoScanMixer'
+      - ['DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'MHSA', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'MHSA', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'MHSA', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'DuoScanMixer', 'MHSA']
+      - 'MHSA'
+    D_STATE: 16
+    NGROUPS: 2
+    MLP_RATIO: 4.0
+    GATING: True
+    LPU: True
+    STEM_VER: 1
+    DOWNSAMPLER_VER: 1
+
+  DDP: 'torch'
+
+TRAIN:
+  EPOCHS: 300
+  WARMUP_EPOCHS: 20
+  MESA: 2.0
+
+# RTX 4090
+# 91.1 M 15.4 GFLOPs 474 TP 3255 MB 85.4% Acc@1
+
+DATA:
+  BATCH_SIZE: 256
+
+AMP_DTYPE: bf16

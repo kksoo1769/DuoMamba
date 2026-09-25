@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the ACCV 2026 paper using the provisional citation below."
+type: software
+repository-code: "https://github.com/kksoo1769/DuoMamba"
+title: "DuoMamba: A Vision Backbone with Duo Scan and Resolution-Aware Mixer Scheduling"
+authors: &authors
+  - family-names: Kim
+    given-names: Gwangsoo
+  - family-names: Oh
+    given-names: Seungkyu
+  - family-names: Kim
+    given-names: Dohhoon
+  - family-names: Adhikari
+    given-names: Nirmal
+  - family-names: Thapa Magar
+    given-names: Bimal
+  - family-names: Lee
+    given-names: Suan
+  - family-names: Lee
+    given-names: Wookey
+preferred-citation:
+  type: conference-paper
+  title: "DuoMamba: A Vision Backbone with Duo Scan and Resolution-Aware Mixer Scheduling"
+  authors: *authors
+  collection-title: "Asian Conference on Computer Vision (ACCV)"
+  year: 2026
+  notes: "Accepted; camera-ready version in preparation."

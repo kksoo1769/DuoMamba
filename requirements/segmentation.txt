@@ -1,0 +1,5 @@
+mmengine==0.10.7
+mmcv==2.1.0
+mmsegmentation==1.2.2
+ftfy
+regex

@@ -1,0 +1,27 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+# Training artifacts (do not ignore classification/data source code)
+/checkpoints/
+/data/
+/detection/data/
+/segmentation/data/
+**/output/
+**/work_dirs/
+**/runs/
+**/wandb/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.log
+# Local configuration
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
