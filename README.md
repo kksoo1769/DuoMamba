@@ -26,7 +26,7 @@ Official implementation of **DuoMamba**, a hierarchical vision backbone combinin
 
 - **September 21, 2026:** accepted to ACCV 2026.
 - The camera-ready manuscript is in preparation. There is no public arXiv or proceedings link yet.
-- Training and evaluation code and Tiny/Small/Base configurations are included. Pretrained checkpoints are **not included in this release**; no download links are available yet.
+- Training and evaluation code and Tiny/Small/Base configurations are included. The matching ImageNet-1K pretrained weights are hosted on [Hugging Face](https://huggingface.co/PangS00oo/DuoMamba).
 - Reported results below are from the ACCV manuscript. They have not been remeasured during this repository cleanup.
 
 ## Getting started
@@ -51,6 +51,16 @@ LICENSES/         Third-party license texts
 ```
 
 The implementation lives in `classification/models/duomamba.py`: `DuoMamba` is the backbone, `DuoMambaBlock` is its residual block, and `DuoScanMixer` implements Duo Scan. Classification configs use `MODEL.DUOMAMBA`, and all three tasks use `DuoScanMixer` in their mixer schedules. See [release notes](docs/RELEASE_NOTES.md) for the included recipes and verification scope.
+
+## Pretrained weights
+
+| Variant | ImageNet-1K checkpoint | Classification config |
+|---|---|---|
+| Tiny | [duomamba_tiny.pth](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_tiny.pth) | [tiny.yaml](classification/configs/duomamba/tiny.yaml) |
+| Small | [duomamba_small.pth](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_small.pth) | [small.yaml](classification/configs/duomamba/small.yaml) |
+| Base | [duomamba_base.pth](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_base.pth) | [base.yaml](classification/configs/duomamba/base.yaml) |
+
+Each checkpoint contains only `model` weights. Download the variant matching your config and use it with `--pretrained` for classification or `model.backbone.pretrained` for detection and segmentation. See the [model card](https://huggingface.co/PangS00oo/DuoMamba) and task guides for details. These files do not contain optimizer state for resuming training.
 
 ## Results
 

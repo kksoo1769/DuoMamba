@@ -13,7 +13,7 @@ Complete [installation](../docs/INSTALL.md), including detection dependencies. C
     instances_val2017.json
 ```
 
-Training uses an ImageNet-1K classification checkpoint of the matching variant. Evaluation uses a complete Mask R-CNN checkpoint. Checkpoints are not bundled. A classification checkpoint normally stores weights under `model`; use `model.backbone.key=model_ema` if selecting its EMA weights.
+Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a separate complete Mask R-CNN checkpoint, which is not provided here.
 
 ## Training
 

@@ -14,7 +14,7 @@ Complete [installation](../docs/INSTALL.md), including segmentation dependencies
     validation/
 ```
 
-Training uses an ImageNet-1K classification checkpoint of the matching variant. Evaluation uses a complete UPerNet checkpoint. Checkpoints are not bundled. The default classification checkpoint key is `model`; use `model.backbone.key=model_ema` to select EMA weights.
+Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a separate complete UPerNet checkpoint, which is not provided here.
 
 ## Training
 

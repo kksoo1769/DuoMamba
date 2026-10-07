@@ -42,7 +42,7 @@ For less GPU memory, reduce `--batch-size` and increase `--accumulation-steps` t
 
 ## Evaluation
 
-Checkpoints must be obtained separately. No pretrained weights are bundled in this release.
+Download the matching [ImageNet-1K pretrained checkpoint](https://huggingface.co/PangS00oo/DuoMamba) before evaluation. The three available files are `duomamba_tiny.pth`, `duomamba_small.pth`, and `duomamba_base.pth`.
 
 ```bash
 # From classification/
@@ -54,7 +54,7 @@ torchrun --standalone --nproc_per_node=1 main.py \
     --opts TRAIN.AUTO_RESUME False
 ```
 
-A classification checkpoint contains `model` and optionally `model_ema` state dictionaries. The evaluator logs both when available. Match the config to the checkpoint variant. `--eval` requires a checkpoint; evaluation without weights is rejected.
+The downloadable checkpoints contain only the `model` state dictionary. Match the config to the checkpoint variant. `--eval` requires a checkpoint; evaluation without weights is rejected.
 
 ## Resume
 
@@ -68,5 +68,7 @@ torchrun --standalone --nproc_per_node=8 main.py \
 ```
 
 Output is stored under `<output>/<model-name>/<tag>`. A matching output directory can auto-resume; use a new tag for an independent run.
+
+The Hugging Face checkpoints are model-only. Use `--pretrained` to initialize from them; `--resume` is for a full training checkpoint with optimizer and scheduler state.
 
 Model settings use `MODEL.DUOMAMBA`, for example `--opts MODEL.DUOMAMBA.DROP_PATH_RATE 0.2`. The SSM mixer is named `DuoScanMixer`; attention remains `MHSA`. The release includes Tiny, Small, and Base presets under `configs/duomamba/`. CLI overrides retain their usual order, with the last value winning.
