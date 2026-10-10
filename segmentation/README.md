@@ -14,7 +14,7 @@ Complete [installation](../docs/INSTALL.md), including segmentation dependencies
     validation/
 ```
 
-Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a complete UPerNet checkpoint from the [result tables](../README.md#results). Download the checkpoint matching the variant and schedule; each file stores the complete task model under `state_dict`. Original experiment logs are linked alongside the weights.
+Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba/tree/main/classification) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a complete UPerNet checkpoint from the [result tables](../README.md#results). Download the checkpoint matching the variant and schedule; each file stores the complete task model under `state_dict`. Original experiment logs are linked alongside the weights.
 
 ## Training
 

@@ -42,7 +42,7 @@ For less GPU memory, reduce `--batch-size` and increase `--accumulation-steps` t
 
 ## Evaluation
 
-Download the matching [ImageNet-1K pretrained checkpoint](https://huggingface.co/PangS00oo/DuoMamba) before evaluation. The three available files are `duomamba_tiny.pth`, `duomamba_small.pth`, and `duomamba_base.pth`. The [result tables](../README.md#imagenet-1k-classification) also link to the original experiment logs.
+Download the matching [ImageNet-1K pretrained checkpoint](https://huggingface.co/PangS00oo/DuoMamba/tree/main/classification) before evaluation. The three available files are `duomamba_tiny.pth`, `duomamba_small.pth`, and `duomamba_base.pth`. The [result tables](../README.md#imagenet-1k-classification) also link to the original experiment logs.
 
 ```bash
 # From classification/

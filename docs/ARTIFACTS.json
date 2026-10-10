@@ -1,6 +1,5 @@
 {
   "release_date": "2026-10-10",
-  "source_label": "transfer",
   "hf_repo": "PangS00oo/DuoMamba",
   "notes": [
     "Original logs are byte-identical copies, with historical names and paths preserved.",
@@ -11,11 +10,50 @@
     {
       "task": "classification",
       "variant": "base",
+      "kind": "weights",
+      "source": "duomamba_base.pth",
+      "source_repository": "PangS00oo/DuoMamba",
+      "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
+      "source_bytes": 364437354,
+      "source_sha256": "a7cb96f6b17e42847ec696fcee6cb583bdf183b97d572a8deba3d28727b4adcb",
+      "path": "classification/duomamba_base.pth",
+      "bytes": 364437354,
+      "sha256": "a7cb96f6b17e42847ec696fcee6cb583bdf183b97d572a8deba3d28727b4adcb"
+    },
+    {
+      "task": "classification",
+      "variant": "small",
+      "kind": "weights",
+      "source": "duomamba_small.pth",
+      "source_repository": "PangS00oo/DuoMamba",
+      "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
+      "source_bytes": 163762406,
+      "source_sha256": "77496a04c2208503889176e9119240f6c08d9a2694ca2c1cc1719cb694a19367",
+      "path": "classification/duomamba_small.pth",
+      "bytes": 163762406,
+      "sha256": "77496a04c2208503889176e9119240f6c08d9a2694ca2c1cc1719cb694a19367"
+    },
+    {
+      "task": "classification",
+      "variant": "tiny",
+      "kind": "weights",
+      "source": "duomamba_tiny.pth",
+      "source_repository": "PangS00oo/DuoMamba",
+      "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
+      "source_bytes": 113221686,
+      "source_sha256": "414b530fdc88107552e7ce5c17c9e92d958d32bbcc45d960ce97e030496d145a",
+      "path": "classification/duomamba_tiny.pth",
+      "bytes": 113221686,
+      "sha256": "414b530fdc88107552e7ce5c17c9e92d958d32bbcc45d960ce97e030496d145a"
+    },
+    {
+      "task": "classification",
+      "variant": "base",
       "source": "classification/base/log_rank0.txt",
       "source_bytes": 5840476,
       "source_sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4",
       "kind": "log",
-      "path": "logs/classification/base/log_rank0.txt",
+      "path": "classification/logs/base/log_rank0.txt",
       "bytes": 5840476,
       "sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4"
     },
@@ -26,7 +64,7 @@
       "source_bytes": 5837618,
       "source_sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886",
       "kind": "log",
-      "path": "logs/classification/small/log_rank0.txt",
+      "path": "classification/logs/small/log_rank0.txt",
       "bytes": 5837618,
       "sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886"
     },
@@ -37,7 +75,7 @@
       "source_bytes": 11790504,
       "source_sha256": "c044c553644de8e9a3fb8974fc60200394fd7e478e60cae2593cbf99894ff866",
       "kind": "log",
-      "path": "logs/classification/tiny/log_rank0.txt",
+      "path": "classification/logs/tiny/log_rank0.txt",
       "bytes": 11790504,
       "sha256": "c044c553644de8e9a3fb8974fc60200394fd7e478e60cae2593cbf99894ff866"
     },
@@ -48,9 +86,53 @@
       "source_bytes": 749071,
       "source_sha256": "380c6f0bd7da8e9740700b9396e1acdbf13816dd22d907bbf84978abe790b5a9",
       "kind": "log",
-      "path": "logs/detection/mask_rcnn_duomamba_fpn_coco_base/20260213_150303.log",
+      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_base/20260213_150303.log",
       "bytes": 749071,
       "sha256": "380c6f0bd7da8e9740700b9396e1acdbf13816dd22d907bbf84978abe790b5a9"
+    },
+    {
+      "task": "detection",
+      "variant": "small",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small/20260217_162126.log",
+      "source_bytes": 700988,
+      "source_sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8",
+      "kind": "log",
+      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_small/20260217_162126.log",
+      "bytes": 700988,
+      "sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8"
+    },
+    {
+      "task": "detection",
+      "variant": "small",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small_3x/20260219_003230.log",
+      "source_bytes": 1884005,
+      "source_sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83",
+      "kind": "log",
+      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_small_3x/20260219_003230.log",
+      "bytes": 1884005,
+      "sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83"
+    },
+    {
+      "task": "detection",
+      "variant": "tiny",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny/20260209_143659.log",
+      "source_bytes": 686727,
+      "source_sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861",
+      "kind": "log",
+      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_tiny/20260209_143659.log",
+      "bytes": 686727,
+      "sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861"
+    },
+    {
+      "task": "detection",
+      "variant": "tiny",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny_3x/20260210_145436.log",
+      "source_bytes": 1822896,
+      "source_sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f",
+      "kind": "log",
+      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_tiny_3x/20260210_145436.log",
+      "bytes": 1822896,
+      "sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f"
     },
     {
       "task": "detection",
@@ -72,17 +154,6 @@
     {
       "task": "detection",
       "variant": "small",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small/20260217_162126.log",
-      "source_bytes": 700988,
-      "source_sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8",
-      "kind": "log",
-      "path": "logs/detection/mask_rcnn_duomamba_fpn_coco_small/20260217_162126.log",
-      "bytes": 700988,
-      "sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8"
-    },
-    {
-      "task": "detection",
-      "variant": "small",
       "source": "detection/mask_rcnn_hvmamba_fpn_coco_small/epoch_12.pth",
       "source_bytes": 745370736,
       "source_sha256": "ce4237de63ad317000d43647ac1b01d376f6363e1ddca0d161ad65b748f7612b",
@@ -96,17 +167,6 @@
       "path": "detection/mask_rcnn_duomamba_small_coco_1x.pth",
       "bytes": 242391743,
       "sha256": "860f92f335c96b0c1617a872c42dffbe14fddb5402f2a821adf8a28bf484cf2b"
-    },
-    {
-      "task": "detection",
-      "variant": "small",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small_3x/20260219_003230.log",
-      "source_bytes": 1884005,
-      "source_sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83",
-      "kind": "log",
-      "path": "logs/detection/mask_rcnn_duomamba_fpn_coco_small_3x/20260219_003230.log",
-      "bytes": 1884005,
-      "sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83"
     },
     {
       "task": "detection",
@@ -128,17 +188,6 @@
     {
       "task": "detection",
       "variant": "tiny",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny/20260209_143659.log",
-      "source_bytes": 686727,
-      "source_sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861",
-      "kind": "log",
-      "path": "logs/detection/mask_rcnn_duomamba_fpn_coco_tiny/20260209_143659.log",
-      "bytes": 686727,
-      "sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861"
-    },
-    {
-      "task": "detection",
-      "variant": "tiny",
       "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny/epoch_12.pth",
       "source_bytes": 593650340,
       "source_sha256": "2c2a11fb4c17f6dd5e60d9448300d01dee0d5861d00b48a3748e535e6bea9379",
@@ -152,17 +201,6 @@
       "path": "detection/mask_rcnn_duomamba_tiny_coco_1x.pth",
       "bytes": 191833141,
       "sha256": "4ca8a8f5cb11e72b3448e570b3e32a9fe8f687b32c51a2e3b6f3337626eed6bd"
-    },
-    {
-      "task": "detection",
-      "variant": "tiny",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny_3x/20260210_145436.log",
-      "source_bytes": 1822896,
-      "source_sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f",
-      "kind": "log",
-      "path": "logs/detection/mask_rcnn_duomamba_fpn_coco_tiny_3x/20260210_145436.log",
-      "bytes": 1822896,
-      "sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f"
     },
     {
       "task": "detection",
@@ -188,9 +226,31 @@
       "source_bytes": 30246,
       "source_sha256": "398512cf89e2ece7bb21d67fd9f690f942efdc5ace1148387b99e17183725b15",
       "kind": "log",
-      "path": "logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_base/20260215_075214.log",
+      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_base/20260215_075214.log",
       "bytes": 30246,
       "sha256": "398512cf89e2ece7bb21d67fd9f690f942efdc5ace1148387b99e17183725b15"
+    },
+    {
+      "task": "segmentation",
+      "variant": "small",
+      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
+      "source_bytes": 30209,
+      "source_sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556",
+      "kind": "log",
+      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
+      "bytes": 30209,
+      "sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556"
+    },
+    {
+      "task": "segmentation",
+      "variant": "tiny",
+      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
+      "source_bytes": 28262,
+      "source_sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6",
+      "kind": "log",
+      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
+      "bytes": 28262,
+      "sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6"
     },
     {
       "task": "segmentation",
@@ -212,17 +272,6 @@
     {
       "task": "segmentation",
       "variant": "small",
-      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
-      "source_bytes": 30209,
-      "source_sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556",
-      "kind": "log",
-      "path": "logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
-      "bytes": 30209,
-      "sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556"
-    },
-    {
-      "task": "segmentation",
-      "variant": "small",
       "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_small/iter_160000.pth",
       "source_bytes": 875919685,
       "source_sha256": "6390d9a98e2a03e0305f0144e302a6b923ac8ed6e1456830bd90d3908e4962a5",
@@ -236,17 +285,6 @@
       "path": "segmentation/upernet_duomamba_small_ade20k.pth",
       "bytes": 283083099,
       "sha256": "244011369e3c914e5a1bc7aeeec4b019c6583ab8a6bec6cfdcc8655afd3218b8"
-    },
-    {
-      "task": "segmentation",
-      "variant": "tiny",
-      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
-      "source_bytes": 28262,
-      "source_sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6",
-      "kind": "log",
-      "path": "logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
-      "bytes": 28262,
-      "sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6"
     },
     {
       "task": "segmentation",
@@ -265,5 +303,13 @@
       "bytes": 232525104,
       "sha256": "43434bf2bf3660c8f0d999640222d04e444efa69d19948607216fac8b529188e"
     }
-  ]
+  ],
+  "source_labels": [
+    "transfer",
+    "existing Hugging Face classification release"
+  ],
+  "layout": {
+    "weights": "<task>/*.pth",
+    "logs": "<task>/logs/<experiment>/<filename>"
+  }
 }

@@ -56,6 +56,8 @@ The implementation lives in `classification/models/duomamba.py`: `DuoMamba` is t
 
 The result tables below link to the weights and original experiment logs on [Hugging Face](https://huggingface.co/PangS00oo/DuoMamba). ImageNet-1K checkpoints contain `model` weights for classification evaluation or backbone initialization. Mask R-CNN and UPerNet checkpoints contain the complete task model under `state_dict`. These evaluation checkpoints omit optimizer and scheduler states. See the task guides and [artifact manifest](docs/ARTIFACTS.json) for configurations and files.
 
+Hugging Face groups weights and logs by task: `classification/`, `detection/`, and `segmentation/`. Each task directory contains its checkpoints and a `logs/` subdirectory.
+
 ## Results
 
 ### ImageNet-1K classification
@@ -64,9 +66,9 @@ The result tables below link to the weights and original experiment logs on [Hug
 
 | Model | #Params | FLOPs | Top-1 Acc (%) | Weights | Logs |
 |-------|---------|-------|---------------|---------|------|
-| DuoMamba-T | 28M  | 4.8G  | 84.0 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_tiny.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/classification/tiny/log_rank0.txt) |
-| DuoMamba-S | 41M  | 7.2G  | 84.7 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_small.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/classification/small/log_rank0.txt) |
-| DuoMamba-B | 91M  | 15.4G | 85.4 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/duomamba_base.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/classification/base/log_rank0.txt) |
+| DuoMamba-T | 28M  | 4.8G  | 84.0 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/classification/duomamba_tiny.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/classification/logs/tiny/log_rank0.txt) |
+| DuoMamba-S | 41M  | 7.2G  | 84.7 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/classification/duomamba_small.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/classification/logs/small/log_rank0.txt) |
+| DuoMamba-B | 91M  | 15.4G | 85.4 | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/classification/duomamba_base.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/classification/logs/base/log_rank0.txt) |
 
 ### COCO object detection and instance segmentation
 
@@ -76,16 +78,16 @@ Mask R-CNN with ImageNet-1K initialization. FLOPs are reported at 1280 × 800. A
 
 | Backbone | AP<sup>b</sup> | AP<sup>b</sup><sub>50</sub> | AP<sup>b</sup><sub>75</sub> | AP<sup>m</sup> | AP<sup>m</sup><sub>50</sub> | AP<sup>m</sup><sub>75</sub> | #Params | FLOPs | Weights | Logs |
 |----------|------|---------|---------|------|---------|---------|---------|-------|---------|------|
-| DuoMamba-T | 48.3 | 70.2 | 53.3 | 43.6 | 67.5 | 47.2 | 48M | 301G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_tiny_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/detection/mask_rcnn_duomamba_fpn_coco_tiny/20260209_143659.log) |
-| DuoMamba-S | 49.7 | 71.7 | 54.6 | 44.5 | 68.7 | 47.7 | 61M | 369G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_small_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/detection/mask_rcnn_duomamba_fpn_coco_small/20260217_162126.log) |
-| DuoMamba-B | 50.6 | 72.5 | 55.6 | 45.2 | 69.6 | 48.8 | 111M | 564G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_base_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/detection/mask_rcnn_duomamba_fpn_coco_base/20260213_150303.log) |
+| DuoMamba-T | 48.3 | 70.2 | 53.3 | 43.6 | 67.5 | 47.2 | 48M | 301G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_tiny_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/detection/logs/mask_rcnn_duomamba_fpn_coco_tiny/20260209_143659.log) |
+| DuoMamba-S | 49.7 | 71.7 | 54.6 | 44.5 | 68.7 | 47.7 | 61M | 369G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_small_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/detection/logs/mask_rcnn_duomamba_fpn_coco_small/20260217_162126.log) |
+| DuoMamba-B | 50.6 | 72.5 | 55.6 | 45.2 | 69.6 | 48.8 | 111M | 564G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_base_coco_1x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/detection/logs/mask_rcnn_duomamba_fpn_coco_base/20260213_150303.log) |
 
 **3× schedule (36 epochs) with multi-scale training**
 
 | Backbone | AP<sup>b</sup> | AP<sup>b</sup><sub>50</sub> | AP<sup>b</sup><sub>75</sub> | AP<sup>m</sup> | AP<sup>m</sup><sub>50</sub> | AP<sup>m</sup><sub>75</sub> | #Params | FLOPs | Weights | Logs |
 |----------|------|---------|---------|------|---------|---------|---------|-------|---------|------|
-| DuoMamba-T | 49.9 | 71.3 | 54.7 | 44.3 | 68.5 | 47.8 | 48M | 301G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_tiny_coco_3x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/detection/mask_rcnn_duomamba_fpn_coco_tiny_3x/20260210_145436.log) |
-| DuoMamba-S | 51.1 | 72.3 | 56.0 | 45.3 | 69.5 | 49.1 | 61M | 369G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_small_coco_3x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/detection/mask_rcnn_duomamba_fpn_coco_small_3x/20260219_003230.log) |
+| DuoMamba-T | 49.9 | 71.3 | 54.7 | 44.3 | 68.5 | 47.8 | 48M | 301G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_tiny_coco_3x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/detection/logs/mask_rcnn_duomamba_fpn_coco_tiny_3x/20260210_145436.log) |
+| DuoMamba-S | 51.1 | 72.3 | 56.0 | 45.3 | 69.5 | 49.1 | 61M | 369G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/detection/mask_rcnn_duomamba_small_coco_3x.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/detection/logs/mask_rcnn_duomamba_fpn_coco_small_3x/20260219_003230.log) |
 
 ### ADE20K semantic segmentation
 
@@ -93,9 +95,9 @@ UPerNet, 512 × 512 training crops, 160k iterations, total batch size 16. SS/MS 
 
 | Backbone | mIoU (SS) | mIoU (MS) | #Params | FLOPs | Weights | Logs |
 |----------|-----------|-----------|---------|-------|---------|------|
-| DuoMamba-T | 49.5 | 50.0 | 57M | 978G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_tiny_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log) |
-| DuoMamba-S | 50.3 | 51.3 | 70M | 1048G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_small_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log) |
-| DuoMamba-B | 52.1 | 52.7 | 122M | 1250G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_base_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/logs/segmentation/upernet_duomamba_8xb2-160k_ade20k-512x512_base/20260215_075214.log) |
+| DuoMamba-T | 49.5 | 50.0 | 57M | 978G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_tiny_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log) |
+| DuoMamba-S | 50.3 | 51.3 | 70M | 1048G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_small_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log) |
+| DuoMamba-B | 52.1 | 52.7 | 122M | 1250G | [Weights](https://huggingface.co/PangS00oo/DuoMamba/resolve/main/segmentation/upernet_duomamba_base_ade20k.pth) | [Logs](https://huggingface.co/PangS00oo/DuoMamba/blob/main/segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_base/20260215_075214.log) |
 
 ## Citation
 
