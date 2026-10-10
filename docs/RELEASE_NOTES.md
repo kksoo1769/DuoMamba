@@ -31,4 +31,4 @@ A project-wide license for original DuoMamba contributions has not been selected
 
 Added five COCO Mask R-CNN checkpoints, three ADE20K UPerNet checkpoints, and eleven original experiment logs to Hugging Face. The dense prediction checkpoints preserve every `state_dict` tensor and basic epoch/iteration and dataset metadata, while removing optimizer, scheduler, message-hub state, and the embedded training configuration. CPU checks confirmed tensor equality to the source checkpoints, finite tensors, and loading with `weights_only=True`. Log copies were verified with SHA-256. This artifact release did not run dataset evaluation or CUDA inference.
 
-Weights and logs on Hugging Face are grouped by task under `classification/`, `detection/`, and `segmentation/`; each task contains its own `logs/` directory. The artifact manifest and checksums cover all eleven checkpoints and eleven logs.
+Weights and logs on Hugging Face are grouped by task and experiment under `classification/`, `detection/`, and `segmentation/`; each experiment directory contains its checkpoint and log together. The artifact manifest and checksums cover all eleven checkpoints and eleven logs.

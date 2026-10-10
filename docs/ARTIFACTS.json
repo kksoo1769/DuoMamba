@@ -16,9 +16,22 @@
       "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
       "source_bytes": 364437354,
       "source_sha256": "a7cb96f6b17e42847ec696fcee6cb583bdf183b97d572a8deba3d28727b4adcb",
-      "path": "classification/duomamba_base.pth",
+      "path": "classification/duomamba_base_imagenet1k/duomamba_base.pth",
       "bytes": 364437354,
-      "sha256": "a7cb96f6b17e42847ec696fcee6cb583bdf183b97d572a8deba3d28727b4adcb"
+      "sha256": "a7cb96f6b17e42847ec696fcee6cb583bdf183b97d572a8deba3d28727b4adcb",
+      "experiment": "duomamba_base_imagenet1k"
+    },
+    {
+      "task": "classification",
+      "variant": "base",
+      "source": "classification/base/log_rank0.txt",
+      "source_bytes": 5840476,
+      "source_sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4",
+      "kind": "log",
+      "path": "classification/duomamba_base_imagenet1k/log_rank0.txt",
+      "bytes": 5840476,
+      "sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4",
+      "experiment": "duomamba_base_imagenet1k"
     },
     {
       "task": "classification",
@@ -29,9 +42,22 @@
       "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
       "source_bytes": 163762406,
       "source_sha256": "77496a04c2208503889176e9119240f6c08d9a2694ca2c1cc1719cb694a19367",
-      "path": "classification/duomamba_small.pth",
+      "path": "classification/duomamba_small_imagenet1k/duomamba_small.pth",
       "bytes": 163762406,
-      "sha256": "77496a04c2208503889176e9119240f6c08d9a2694ca2c1cc1719cb694a19367"
+      "sha256": "77496a04c2208503889176e9119240f6c08d9a2694ca2c1cc1719cb694a19367",
+      "experiment": "duomamba_small_imagenet1k"
+    },
+    {
+      "task": "classification",
+      "variant": "small",
+      "source": "classification/small/log_rank0.txt",
+      "source_bytes": 5837618,
+      "source_sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886",
+      "kind": "log",
+      "path": "classification/duomamba_small_imagenet1k/log_rank0.txt",
+      "bytes": 5837618,
+      "sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886",
+      "experiment": "duomamba_small_imagenet1k"
     },
     {
       "task": "classification",
@@ -42,31 +68,10 @@
       "source_revision": "2d0b4d766083459e1a1ca43400eb4b8007b722c4",
       "source_bytes": 113221686,
       "source_sha256": "414b530fdc88107552e7ce5c17c9e92d958d32bbcc45d960ce97e030496d145a",
-      "path": "classification/duomamba_tiny.pth",
+      "path": "classification/duomamba_tiny_imagenet1k/duomamba_tiny.pth",
       "bytes": 113221686,
-      "sha256": "414b530fdc88107552e7ce5c17c9e92d958d32bbcc45d960ce97e030496d145a"
-    },
-    {
-      "task": "classification",
-      "variant": "base",
-      "source": "classification/base/log_rank0.txt",
-      "source_bytes": 5840476,
-      "source_sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4",
-      "kind": "log",
-      "path": "classification/logs/base/log_rank0.txt",
-      "bytes": 5840476,
-      "sha256": "b16e9347fb37b187763bbab6d564eec213d4a81d487e8a740644595a3b7c91d4"
-    },
-    {
-      "task": "classification",
-      "variant": "small",
-      "source": "classification/small/log_rank0.txt",
-      "source_bytes": 5837618,
-      "source_sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886",
-      "kind": "log",
-      "path": "classification/logs/small/log_rank0.txt",
-      "bytes": 5837618,
-      "sha256": "9c1f923df921bfaf22ac6b1f8ce43c87dbe4f676b1a253bb6bdc02bb52ae3886"
+      "sha256": "414b530fdc88107552e7ce5c17c9e92d958d32bbcc45d960ce97e030496d145a",
+      "experiment": "duomamba_tiny_imagenet1k"
     },
     {
       "task": "classification",
@@ -75,9 +80,10 @@
       "source_bytes": 11790504,
       "source_sha256": "c044c553644de8e9a3fb8974fc60200394fd7e478e60cae2593cbf99894ff866",
       "kind": "log",
-      "path": "classification/logs/tiny/log_rank0.txt",
+      "path": "classification/duomamba_tiny_imagenet1k/log_rank0.txt",
       "bytes": 11790504,
-      "sha256": "c044c553644de8e9a3fb8974fc60200394fd7e478e60cae2593cbf99894ff866"
+      "sha256": "c044c553644de8e9a3fb8974fc60200394fd7e478e60cae2593cbf99894ff866",
+      "experiment": "duomamba_tiny_imagenet1k"
     },
     {
       "task": "detection",
@@ -86,53 +92,10 @@
       "source_bytes": 749071,
       "source_sha256": "380c6f0bd7da8e9740700b9396e1acdbf13816dd22d907bbf84978abe790b5a9",
       "kind": "log",
-      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_base/20260213_150303.log",
+      "path": "detection/mask_rcnn_duomamba_base_coco_1x/20260213_150303.log",
       "bytes": 749071,
-      "sha256": "380c6f0bd7da8e9740700b9396e1acdbf13816dd22d907bbf84978abe790b5a9"
-    },
-    {
-      "task": "detection",
-      "variant": "small",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small/20260217_162126.log",
-      "source_bytes": 700988,
-      "source_sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8",
-      "kind": "log",
-      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_small/20260217_162126.log",
-      "bytes": 700988,
-      "sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8"
-    },
-    {
-      "task": "detection",
-      "variant": "small",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small_3x/20260219_003230.log",
-      "source_bytes": 1884005,
-      "source_sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83",
-      "kind": "log",
-      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_small_3x/20260219_003230.log",
-      "bytes": 1884005,
-      "sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83"
-    },
-    {
-      "task": "detection",
-      "variant": "tiny",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny/20260209_143659.log",
-      "source_bytes": 686727,
-      "source_sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861",
-      "kind": "log",
-      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_tiny/20260209_143659.log",
-      "bytes": 686727,
-      "sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861"
-    },
-    {
-      "task": "detection",
-      "variant": "tiny",
-      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny_3x/20260210_145436.log",
-      "source_bytes": 1822896,
-      "source_sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f",
-      "kind": "log",
-      "path": "detection/logs/mask_rcnn_duomamba_fpn_coco_tiny_3x/20260210_145436.log",
-      "bytes": 1822896,
-      "sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f"
+      "sha256": "380c6f0bd7da8e9740700b9396e1acdbf13816dd22d907bbf84978abe790b5a9",
+      "experiment": "mask_rcnn_duomamba_base_coco_1x"
     },
     {
       "task": "detection",
@@ -147,9 +110,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "detection/mask_rcnn_duomamba_base_coco_1x.pth",
+      "path": "detection/mask_rcnn_duomamba_base_coco_1x/mask_rcnn_duomamba_base_coco_1x.pth",
       "bytes": 442536979,
-      "sha256": "a1f7dbbccd7bf4c75205797edec03cd38c029d33ef7cf549624cfabaef462672"
+      "sha256": "a1f7dbbccd7bf4c75205797edec03cd38c029d33ef7cf549624cfabaef462672",
+      "experiment": "mask_rcnn_duomamba_base_coco_1x"
+    },
+    {
+      "task": "detection",
+      "variant": "small",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small/20260217_162126.log",
+      "source_bytes": 700988,
+      "source_sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8",
+      "kind": "log",
+      "path": "detection/mask_rcnn_duomamba_small_coco_1x/20260217_162126.log",
+      "bytes": 700988,
+      "sha256": "404bc667e85924c72eed067b4960ec1a54927ca776514758a492c7acc71c5cf8",
+      "experiment": "mask_rcnn_duomamba_small_coco_1x"
     },
     {
       "task": "detection",
@@ -164,9 +140,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "detection/mask_rcnn_duomamba_small_coco_1x.pth",
+      "path": "detection/mask_rcnn_duomamba_small_coco_1x/mask_rcnn_duomamba_small_coco_1x.pth",
       "bytes": 242391743,
-      "sha256": "860f92f335c96b0c1617a872c42dffbe14fddb5402f2a821adf8a28bf484cf2b"
+      "sha256": "860f92f335c96b0c1617a872c42dffbe14fddb5402f2a821adf8a28bf484cf2b",
+      "experiment": "mask_rcnn_duomamba_small_coco_1x"
+    },
+    {
+      "task": "detection",
+      "variant": "small",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_small_3x/20260219_003230.log",
+      "source_bytes": 1884005,
+      "source_sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83",
+      "kind": "log",
+      "path": "detection/mask_rcnn_duomamba_small_coco_3x/20260219_003230.log",
+      "bytes": 1884005,
+      "sha256": "36e3f3c69fe467efa3a291d462fcdca9f648c4031127c8b24f5af9a10e168c83",
+      "experiment": "mask_rcnn_duomamba_small_coco_3x"
     },
     {
       "task": "detection",
@@ -181,9 +170,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "detection/mask_rcnn_duomamba_small_coco_3x.pth",
+      "path": "detection/mask_rcnn_duomamba_small_coco_3x/mask_rcnn_duomamba_small_coco_3x.pth",
       "bytes": 242391743,
-      "sha256": "ac24ace6000c1fcf4065f0eb65ae88066a69856660d61e40edcc287c65d367f9"
+      "sha256": "ac24ace6000c1fcf4065f0eb65ae88066a69856660d61e40edcc287c65d367f9",
+      "experiment": "mask_rcnn_duomamba_small_coco_3x"
+    },
+    {
+      "task": "detection",
+      "variant": "tiny",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny/20260209_143659.log",
+      "source_bytes": 686727,
+      "source_sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861",
+      "kind": "log",
+      "path": "detection/mask_rcnn_duomamba_tiny_coco_1x/20260209_143659.log",
+      "bytes": 686727,
+      "sha256": "ff4a0e58d152802fc8776ae2b5192f5ca3eebb2e871b5628ad4f3654eac42861",
+      "experiment": "mask_rcnn_duomamba_tiny_coco_1x"
     },
     {
       "task": "detection",
@@ -198,9 +200,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "detection/mask_rcnn_duomamba_tiny_coco_1x.pth",
+      "path": "detection/mask_rcnn_duomamba_tiny_coco_1x/mask_rcnn_duomamba_tiny_coco_1x.pth",
       "bytes": 191833141,
-      "sha256": "4ca8a8f5cb11e72b3448e570b3e32a9fe8f687b32c51a2e3b6f3337626eed6bd"
+      "sha256": "4ca8a8f5cb11e72b3448e570b3e32a9fe8f687b32c51a2e3b6f3337626eed6bd",
+      "experiment": "mask_rcnn_duomamba_tiny_coco_1x"
+    },
+    {
+      "task": "detection",
+      "variant": "tiny",
+      "source": "detection/mask_rcnn_hvmamba_fpn_coco_tiny_3x/20260210_145436.log",
+      "source_bytes": 1822896,
+      "source_sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f",
+      "kind": "log",
+      "path": "detection/mask_rcnn_duomamba_tiny_coco_3x/20260210_145436.log",
+      "bytes": 1822896,
+      "sha256": "35849d7eab66f25e64948f06997298f82493a6c457dfbe3ef9cd33e321228a0f",
+      "experiment": "mask_rcnn_duomamba_tiny_coco_3x"
     },
     {
       "task": "detection",
@@ -215,9 +230,10 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "detection/mask_rcnn_duomamba_tiny_coco_3x.pth",
+      "path": "detection/mask_rcnn_duomamba_tiny_coco_3x/mask_rcnn_duomamba_tiny_coco_3x.pth",
       "bytes": 191833141,
-      "sha256": "9abf17128a03e06931e9801046b26be4a2d3810eda09dc786bb32edc821c5f11"
+      "sha256": "9abf17128a03e06931e9801046b26be4a2d3810eda09dc786bb32edc821c5f11",
+      "experiment": "mask_rcnn_duomamba_tiny_coco_3x"
     },
     {
       "task": "segmentation",
@@ -226,31 +242,10 @@
       "source_bytes": 30246,
       "source_sha256": "398512cf89e2ece7bb21d67fd9f690f942efdc5ace1148387b99e17183725b15",
       "kind": "log",
-      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_base/20260215_075214.log",
+      "path": "segmentation/upernet_duomamba_base_ade20k_160k/20260215_075214.log",
       "bytes": 30246,
-      "sha256": "398512cf89e2ece7bb21d67fd9f690f942efdc5ace1148387b99e17183725b15"
-    },
-    {
-      "task": "segmentation",
-      "variant": "small",
-      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
-      "source_bytes": 30209,
-      "source_sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556",
-      "kind": "log",
-      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
-      "bytes": 30209,
-      "sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556"
-    },
-    {
-      "task": "segmentation",
-      "variant": "tiny",
-      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
-      "source_bytes": 28262,
-      "source_sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6",
-      "kind": "log",
-      "path": "segmentation/logs/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
-      "bytes": 28262,
-      "sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6"
+      "sha256": "398512cf89e2ece7bb21d67fd9f690f942efdc5ace1148387b99e17183725b15",
+      "experiment": "upernet_duomamba_base_ade20k_160k"
     },
     {
       "task": "segmentation",
@@ -265,9 +260,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "segmentation/upernet_duomamba_base_ade20k.pth",
+      "path": "segmentation/upernet_duomamba_base_ade20k_160k/upernet_duomamba_base_ade20k.pth",
       "bytes": 491190855,
-      "sha256": "80e10c24e7d5549ae900ec3c92c029be0a49fd6f6663cd78a8fddbba47a1a892"
+      "sha256": "80e10c24e7d5549ae900ec3c92c029be0a49fd6f6663cd78a8fddbba47a1a892",
+      "experiment": "upernet_duomamba_base_ade20k_160k"
+    },
+    {
+      "task": "segmentation",
+      "variant": "small",
+      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_small/20260219_000549.log",
+      "source_bytes": 30209,
+      "source_sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556",
+      "kind": "log",
+      "path": "segmentation/upernet_duomamba_small_ade20k_160k/20260219_000549.log",
+      "bytes": 30209,
+      "sha256": "a8dc980566dd03c410bdf56b2b47bda8103b96f2a3d51aa3dafdf1218762a556",
+      "experiment": "upernet_duomamba_small_ade20k_160k"
     },
     {
       "task": "segmentation",
@@ -282,9 +290,22 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "segmentation/upernet_duomamba_small_ade20k.pth",
+      "path": "segmentation/upernet_duomamba_small_ade20k_160k/upernet_duomamba_small_ade20k.pth",
       "bytes": 283083099,
-      "sha256": "244011369e3c914e5a1bc7aeeec4b019c6583ab8a6bec6cfdcc8655afd3218b8"
+      "sha256": "244011369e3c914e5a1bc7aeeec4b019c6583ab8a6bec6cfdcc8655afd3218b8",
+      "experiment": "upernet_duomamba_small_ade20k_160k"
+    },
+    {
+      "task": "segmentation",
+      "variant": "tiny",
+      "source": "segmentation/upernet_hvmamba_8xb2-160k_ade20k-512x512_tiny/20260212_122903.log",
+      "source_bytes": 28262,
+      "source_sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6",
+      "kind": "log",
+      "path": "segmentation/upernet_duomamba_tiny_ade20k_160k/20260212_122903.log",
+      "bytes": 28262,
+      "sha256": "73b0b70ec0e49170a2a726018c45d074576cd99b8129881357a1886c601f1bc6",
+      "experiment": "upernet_duomamba_tiny_ade20k_160k"
     },
     {
       "task": "segmentation",
@@ -299,9 +320,10 @@
       "tensor_equality": true,
       "nonfinite_tensors": 0,
       "default_weights_only_load": true,
-      "path": "segmentation/upernet_duomamba_tiny_ade20k.pth",
+      "path": "segmentation/upernet_duomamba_tiny_ade20k_160k/upernet_duomamba_tiny_ade20k.pth",
       "bytes": 232525104,
-      "sha256": "43434bf2bf3660c8f0d999640222d04e444efa69d19948607216fac8b529188e"
+      "sha256": "43434bf2bf3660c8f0d999640222d04e444efa69d19948607216fac8b529188e",
+      "experiment": "upernet_duomamba_tiny_ade20k_160k"
     }
   ],
   "source_labels": [
@@ -309,7 +331,7 @@
     "existing Hugging Face classification release"
   ],
   "layout": {
-    "weights": "<task>/*.pth",
-    "logs": "<task>/logs/<experiment>/<filename>"
+    "weights": "<task>/<experiment>/<checkpoint>.pth",
+    "logs": "<task>/<experiment>/<log_filename>"
   }
 }
