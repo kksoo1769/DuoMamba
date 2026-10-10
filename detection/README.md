@@ -13,7 +13,7 @@ Complete [installation](../docs/INSTALL.md), including detection dependencies. C
     instances_val2017.json
 ```
 
-Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a separate complete Mask R-CNN checkpoint, which is not provided here.
+Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a complete Mask R-CNN checkpoint from the [result tables](../README.md#results). Download the checkpoint matching the variant and schedule; each file stores the complete task model under `state_dict`. Original experiment logs are linked alongside the weights.
 
 ## Training
 
@@ -38,7 +38,7 @@ All paths above are relative to `configs/duomamba/`. The recipe uses 2 images pe
 ```bash
 # From detection/
 bash tools/dist_test.sh configs/duomamba/mask_rcnn_duomamba_fpn_coco_tiny.py \
-    /path/to/mask_rcnn_duomamba_tiny.pth 8 \
+    /path/to/mask_rcnn_duomamba_tiny_coco_1x.pth 8 \
     --data-path /path/to/coco
 ```
 

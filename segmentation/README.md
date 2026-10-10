@@ -14,7 +14,7 @@ Complete [installation](../docs/INSTALL.md), including segmentation dependencies
     validation/
 ```
 
-Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a separate complete UPerNet checkpoint, which is not provided here.
+Training uses the matching [ImageNet-1K classification checkpoint](https://huggingface.co/PangS00oo/DuoMamba) from Hugging Face. Download `duomamba_tiny.pth`, `duomamba_small.pth`, or `duomamba_base.pth` for the chosen backbone. Each file stores weights under `model`. Evaluation uses a complete UPerNet checkpoint from the [result tables](../README.md#results). Download the checkpoint matching the variant and schedule; each file stores the complete task model under `state_dict`. Original experiment logs are linked alongside the weights.
 
 ## Training
 
@@ -33,7 +33,7 @@ Replace `_tiny.py` with `_small.py` or `_base.py` for the other variants. Traini
 ```bash
 # From segmentation/
 bash tools/dist_test.sh configs/duomamba/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny.py \
-    /path/to/upernet_duomamba_tiny.pth 8 \
+    /path/to/upernet_duomamba_tiny_ade20k.pth 8 \
     --data-path /path/to/ADEChallengeData2016
 ```
 
@@ -42,7 +42,7 @@ bash tools/dist_test.sh configs/duomamba/upernet_duomamba_8xb2-160k_ade20k-512x5
 ```bash
 # From segmentation/
 bash tools/dist_test.sh configs/duomamba/upernet_duomamba_8xb2-160k_ade20k-512x512_tiny.py \
-    /path/to/upernet_duomamba_tiny.pth 8 \
+    /path/to/upernet_duomamba_tiny_ade20k.pth 8 \
     --data-path /path/to/ADEChallengeData2016 --tta
 ```
 
